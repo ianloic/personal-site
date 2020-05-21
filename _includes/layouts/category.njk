@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-home
+---
+
+{{ content | safe }}
+
+<ul class="articles">
+  {%- for article in collections[collection] -%}
+  <li>
+    <a href="{{ article.url | url }}">{{ article.data.title }}</a>
+  </li>
+  {%- endfor -%}
+</ul>

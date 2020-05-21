@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-home
+---
+
+{{ content | safe }}
+
+<div class="columns">
+  <div>
+    <h2>Software</h2>
+  </div>
+  <div>
+    <h2>Opinions</h2>
+    <ul class="articles">
+      {%- for article in collections.opinion -%}
+      <li>{{ article.data.title }}</li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
