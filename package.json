@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy build",
-    "serve": "eleventy serve",
-    "deploy": "npm run build && firebase deploy"
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "deploy": "eleventy && firebase deploy"
   },
   "keywords": [],
   "author": "",

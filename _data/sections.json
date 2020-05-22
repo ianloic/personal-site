@@ -2,11 +2,11 @@
   { "name": "Home", "url": "/" },
   { "name": "About", "url": "/about" },
   { "name": "Projects", "url": "/projects", "tag": "project" },
-  { "name": "Ideas", "url": "/ideas", "tag": "idea" },
   {
     "name": "Opinions",
     "url": "/opinions",
     "tag": "opinion",
     "long": "These opinions are my own but they're unlikely to be original."
-  }
+  },
+  { "name": "Notes", "url": "/notes", "tag": "note" }
 ]
