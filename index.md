@@ -4,7 +4,9 @@ layout: layouts/index.njk
 section: /
 ---
 
-My name is Ian and this is a web site I made. It contains:
+My name is Ian and this is a web site I made.
+
+It contains:
 
 - [information about me](/about)
 - [pretentious opinions](/opinions)
