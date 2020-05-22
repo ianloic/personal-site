@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ⚡ lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
     <title>{{ title }}: Ian McKellar</title>
-    <link rel="stylesheet" href="/css/new.css" />
-    <link rel="stylesheet" href="/css/site.css" />
+    <style>
+      {% include "css/new.css" %}
+      {% include "css/site.css" %}
+    </style>
   </head>
   <body>
-    <header>
-      <h1>{{ title }}</h1>
-    </header>
-    <main>
-      {{ content | safe }}
-    </main>
-    <footer>
-      <div id="sections">
-        {% for s in sections %} {% if s.url == section %}
-        <b
-          ><a href="{{ s.url }}">{{ s.name }}</a></b
-        >
-        {% else %}
-        <a href="{{ s.url }}">{{ s.name }}</a>
-        {% endif %} {% endfor %}
-      </div>
-      <br />
-      <div id="copy">&copy; 2020 Ian McKellar.</div>
-    </footer>
+    <div id="container">
+      <header>
+        <h1>{{ title }}</h1>
+      </header>
+      <main>
+        {{ content | safe }}
+      </main>
+      <footer>
+        <div id="sections">
+          {% for s in sections %} {% if s.url == section %}
+          <b
+            ><a href="{{ s.url }}">{{ s.name }}</a></b
+          >
+          {% else %}
+          <a href="{{ s.url }}">{{ s.name }}</a>
+          {% endif %} {% endfor %}
+        </div>
+        <br />
+        <div id="copy">&copy; 2020 Ian McKellar.</div>
+      </footer>
+    </div>
   </body>
 </html>

@@ -1,9 +1,12 @@
 /* layout */
-body {
+
+#container {
+  /* Center body in page */
+  margin: 0 auto;
+  max-width: 750px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  padding: 0;
 }
 
 main {
@@ -54,7 +57,13 @@ footer {
 #sections a {
   color: var(--nc-tx-2);
   text-decoration: none;
+  margin-right: 0.2em;
 }
 #sections a:hover {
   text-decoration: underline;
+}
+
+#sections a::before {
+  content: "»";
+  margin-right: 0.1em;
 }
