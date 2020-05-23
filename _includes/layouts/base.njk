@@ -6,12 +6,12 @@
       name="viewport"
       content="width=device-width,minimum-scale=1,initial-scale=1"
     />
-    <title>{{ title }}: Ian McKellar</title>
+    <title>{{ title }}: {{ metadata.title }}</title>
     <link rel="canonical" href="{{ page.url | url }}" />
     <link
       rel="alternate"
       type="application/atom+xml"
-      title="Ian McKellar"
+      title="{{ metadata.title }}"
       href="/feed.xml"
     />
     <style>
@@ -38,7 +38,9 @@
           {% endif %} {% endfor %}
         </div>
         <br />
-        <div id="copy">&copy; 2020 Ian McKellar.</div>
+        <div id="copy">
+          &copy; {{ currentYear }} {{ metadata.author.name }}.
+        </div>
       </footer>
     </div>
   </body>
