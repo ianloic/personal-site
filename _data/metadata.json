@@ -1,1 +1,9 @@
-{}
+{
+  "title": "Ian McKellar",
+  "url": "https://ian.mckellar.org/",
+  "feedUrl": "https://ian.mckellar.org/feed.xml",
+  "author": {
+    "name": "Ian McKellar",
+    "email": "ian@mckellar.org"
+  }
+}

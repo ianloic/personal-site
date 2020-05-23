@@ -4,18 +4,15 @@ templateClass: tmpl-home
 ---
 
 {{ content | safe }}
-<!--
-<div class="columns">
-  <div>
-    <h2>Software</h2>
-  </div>
-  <div>
-    <h2>Opinions</h2>
-    <ul class="articles">
-      {%- for article in collections.opinion -%}
-      <li>{{ article.data.title }}</li>
-      {%- endfor -%}
-    </ul>
-  </div>
-</div>
--->
+
+<h2>Recent Posts</h2>
+<ul>
+  {%- for post in collections.posts -%}
+    <li>
+      <a href="{{ post.url | url }}" class="post-title">{{ post.data.title }}</a>
+      &mdash;
+      <span class="post-date">{{ post.date | readableDate }}</span>
+    </li>
+  {%- endfor -%}
+</ul>
+
