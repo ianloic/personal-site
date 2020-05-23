@@ -4,27 +4,28 @@
   pagination: {
     data: "sections",
     size: 1,
-    alias: "section",
+    alias: "current_section",
     before: function(data) {
       let sections = data.filter((s) => s.tag);
       return sections;
     }
   },
-  permalink: "{{pagination.items[0].url}}/index.html",
+  permalink: "{{ current_section.url }}/index.html",
   eleventyComputed: {
-    title: "{{ pagination.items[0].name }}"
+    title: "{{ current_section.name }}",
+    section: "{{ current_section.url }}",
   }
 }
 ---
 
-{%- if section.long -%}
+{%- if current_section.long -%}
 <p>
-{{ section.long | safe }}
+{{ current_section.long | safe }}
 <p>
 {%- endif -%}
 
 <ul class="articles">
-  {%- for article in collections[section.tag] -%}
+  {%- for article in collections[current_section.tag] -%}
   <li>
     <a href="{{ article.url | url }}">{{ article.data.title }}</a>
   </li>
